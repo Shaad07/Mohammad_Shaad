@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px; /* Increased horizontal padding for wider spacing */
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  max-width: 100%; /* Ensures it takes full screen */
+  box-sizing: border-box; /* Ensures padding doesn't add extra width */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00e6e6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a,
+.nav-links li .active-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li .active-link:hover,
+.nav-links li:hover {
+  color: #00e6e6;
+}
+
+.nav-links li a::after,
+.nav-links li .active-link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00e6e6;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.nav-links li a:hover::after,
+.nav-links li .active-link:hover::after {
+  width: 100%;
+}

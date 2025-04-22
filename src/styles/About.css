@@ -1,0 +1,138 @@
+/* .about-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.about-left {
+  flex: 0 0 65%;
+}
+
+.about-right {
+  flex: 0 0 35%;
+}
+
+.about-left p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.info-box {
+  background-color: #1e1e1e;
+  padding: 25px 30px;
+  border-radius: 12px;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 230, 230, 0.4);
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-box p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.info-box strong {
+  color: #00e6e6;
+}
+
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 100%;
+  }
+
+  .about-right {
+    margin-top: 30px;
+  }
+} */
+.about-section {
+  background-color: #121212;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-description {
+  flex: 0 0 65%;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.personal-info-box {
+  flex: 0 0 35%;
+  background-color: #1e1e1e;
+  padding: 25px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 230, 230, 0.4);
+  max-width: 100%;
+}
+
+.personal-info-box p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.personal-info-box strong {
+  color: #00e6e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-description,
+  .personal-info-box {
+    flex: 100%;
+  }
+
+  .personal-info-box {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,21 @@
+.interests {
+    text-align: center;
+  }
+  
+  .interests h2 {
+    font-size: 2rem;
+    color: #00e6e6;
+    margin-bottom: 20px;
+  }
+  
+  .interest-list {
+    list-style: none;
+    padding: 0;
+    color: #ccc;
+  }
+  
+  .interest-list li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  

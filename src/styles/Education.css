@@ -1,0 +1,38 @@
+.edu-intern-wrapper {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.edu-column,
+.intern-column {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edu-card,
+.intern-card {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  min-height: 180px; /* Ensures all cards have a minimum height */
+}
+.edu-column h2,
+.intern-column h2 {
+  color: #00e6e6; /* Choose your preferred color */
+
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
