@@ -1,24 +1,16 @@
 import React from 'react';
 import './styles/App.css';
-import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Corrected imports
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Education from './components/Education';
-// import Interests from './components/Interests';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Certificates from './components/Certificates';
-
-// Before:
-// import { BrowserRouter as Router } from "react-router-dom";
-
-// After:
-import { HashRouter as Router } from "react-router-dom";
-
 
 function Home() {
   return (
@@ -27,7 +19,6 @@ function Home() {
       <About />
       <Skills />
       <Education />
-      {/* <Interests /> */}
       <Projects />
       <Contact />
       <Footer />
