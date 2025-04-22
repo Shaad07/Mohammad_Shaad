@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -12,6 +12,13 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Certificates from './components/Certificates';
+
+// Before:
+// import { BrowserRouter as Router } from "react-router-dom";
+
+// After:
+import { HashRouter as Router } from "react-router-dom";
+
 
 function Home() {
   return (
