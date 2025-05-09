@@ -27,13 +27,13 @@
     "xlsx": "^0.18.5"
   },
   "scripts": {
-  "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-  "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
-  "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -57,5 +57,4 @@
     "webpack": "^5.99.6"
   },
   "homepage": "https://Shaad07.github.io/Mohammad_Shaad"
-
 }
