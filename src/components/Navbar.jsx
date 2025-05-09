@@ -1,52 +1,3 @@
-// import React from 'react';
-// import '../styles/Navbar.css';
-// import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-// const Navbar = () => {
-//   const location = useLocation();
-//   const navigate = useNavigate();
-
-//   const scrollToSection = (id) => {
-//     if (location.pathname !== "/") {
-//       navigate("/");
-//       setTimeout(() => {
-//         const el = document.getElementById(id);
-//         if (el) el.scrollIntoView({ behavior: "smooth" });
-//       }, 100);
-//     } else {
-//       const el = document.getElementById(id);
-//       if (el) el.scrollIntoView({ behavior: "smooth" });
-//     }
-//   };
-  
-
-//   return (
-//     <nav className="navbar">
-//       <div className="logo">MyPortfolio</div>
-//       <ul className="nav-links">
-//         <li onClick={() => scrollToSection("hero")}>Home</li>
-//         <li onClick={() => scrollToSection("about")}>About</li>
-//         <li onClick={() => scrollToSection("skills")}>Skills</li>
-//         <li onClick={() => scrollToSection("education")}>Education</li>
-//         {/* <li onClick={() => scrollToSection("interests")}>Interests</li> */}
-//         <li onClick={() => scrollToSection("projects")}>Projects</li>
-//         <li onClick={() => scrollToSection("contact")}>Contact</li>
-//         <li>
-//         <Link
-//   to="/certificates"
-//   className={location.hash === "#/certificates" ? "active-link" : ""}
-// >
-//   Certificates
-// </Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -57,6 +8,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   // Scroll to section logic
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Handler to close the menu on link click
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);  // Close the menu when a link is clicked
+  };
+
   const scrollToSection = (id) => {
     if (location.pathname !== "/") {
       navigate("/");
@@ -86,17 +44,17 @@ const Navbar = () => {
 
       {/* Navbar Links */}
       <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <li onClick={() => scrollToSection("hero")}>Home</li>
-        <li onClick={() => scrollToSection("about")}>About</li>
-        <li onClick={() => scrollToSection("skills")}>Skills</li>
-        <li onClick={() => scrollToSection("education")}>Education</li>
-        {/* <li onClick={() => scrollToSection("interests")}>Interests</li> */}
-        <li onClick={() => scrollToSection("projects")}>Projects</li>
-        <li onClick={() => scrollToSection("contact")}>Contact</li>
+        <li onClick={() => {scrollToSection("hero"); handleLinkClick();}}>Home</li>
+        <li onClick={() => {scrollToSection("about"); handleLinkClick();}}>About</li>
+        <li onClick={() => {scrollToSection("skills"); handleLinkClick();}}>Skills</li>
+        <li onClick={() => {scrollToSection("education"); handleLinkClick();}}>Education</li>
+        <li onClick={() => {scrollToSection("projects"); handleLinkClick();}}>Projects</li>
+        <li onClick={() => {scrollToSection("contact"); handleLinkClick();}}>Contact</li>
         <li>
           <Link
             to="/certificates"
             className={location.pathname === "/certificates" ? "active-link" : ""}
+            onClick={handleLinkClick}  // Close menu on click
           >
             Certificates
           </Link>

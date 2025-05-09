@@ -1,4 +1,4 @@
-/* ====== Desktop Styles ====== */
+/* ====== General Styles ====== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   color: #00e6e6;
 }
 
-/* Navbar links - horizontal on desktop */
+/* ====== Desktop Styles ====== */
 .nav-links {
   list-style: none;
   display: flex;
@@ -72,16 +72,18 @@
 
 /* ====== Mobile Styles ====== */
 @media (max-width: 768px) {
+  /* Hamburger visible only on mobile */
   .hamburger {
     display: block;
   }
 
+  /* Navbar links hidden by default on mobile */
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: black;
     position: absolute;
-    top: 70px;
+    top: 70px;  /* Adjust based on navbar height */
     right: 0;
     width: 100%;
     padding: 20px 0;
@@ -89,13 +91,56 @@
     z-index: 99;
   }
 
+  /* Display links when menu is open */
   .nav-links.open {
     display: flex;
   }
 
+  /* Styling for each item in the mobile menu */
   .nav-links li {
     text-align: center;
     font-size: 18px;
     padding: 10px 0;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  /* Hover effect on mobile */
+  .nav-links li:hover {
+    color: #00e6e6;
+  }
+
+  /* Active link highlighting on mobile */
+  .nav-links li .active-link {
+    color: #00e6e6;
+    font-weight: bold;
+  }
+
+  /* Smooth transition for navbar opening */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Mobile menu animation */
+  .nav-links.open {
+    animation: slideIn 0.3s ease-out;
   }
 }
+
+/* ====== Active Link Styling ====== */
+.active-link {
+  color: #00e6e6;  /* Highlight active link */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.active-link:hover {
+  color: #00e6e6; /* Ensure active link doesn't change color */
+}
+
