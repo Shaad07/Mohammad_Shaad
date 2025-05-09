@@ -11,19 +11,22 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Certificates from './components/Certificates';
+// import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function Home() {
   return (
-    <>
-      <Hero />
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
-  );
+    
+      <>
+        <div id="hero"><Hero /></div>
+        <div id="about"><About /></div>
+        <div id="skills"><Skills /></div>
+        <div id="education"><Education /></div>
+        <div id="projects"><Projects /></div>
+        <div id="contact"><Contact /></div>
+        <Footer />
+      </>
+    );
 }
 
 function App() {

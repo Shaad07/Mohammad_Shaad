@@ -1,18 +1,17 @@
+/* ====== Desktop Styles ====== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px; /* Increased horizontal padding for wider spacing */
+  padding: 20px 60px;
   background-color: black;
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
   width: 100%;
-  max-width: 100%; /* Ensures it takes full screen */
-  box-sizing: border-box; /* Ensures padding doesn't add extra width */
+  box-sizing: border-box;
 }
-
 
 .logo {
   font-size: 24px;
@@ -20,6 +19,7 @@
   color: #00e6e6;
 }
 
+/* Navbar links - horizontal on desktop */
 .nav-links {
   list-style: none;
   display: flex;
@@ -60,4 +60,42 @@
 .nav-links li a:hover::after,
 .nav-links li .active-link:hover::after {
   width: 100%;
+}
+
+/* ====== Hamburger Menu (Hidden by Default) ====== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ====== Mobile Styles ====== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+  }
 }

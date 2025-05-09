@@ -1,58 +1,97 @@
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-  
-  .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    color: #ccc;
-  }
-  
-  .hero-text .btn {
-    padding: 10px 20px;
-    background-color: #00e6e6;
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero-img img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00e6e6;
-  }
-  /* .social-icons {
-    margin-top: 20px;
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: #1a1a1a; /* Added background for hero section */
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #00e6e6;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.hero-text .btn {
+  padding: 10px 20px;
+  background-color: #00e6e6;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background-color: #333;
+  border: 1px solid white;
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00e6e6;
+}
+
+.hero button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #00e6e6;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #333;
+  border: 1px solid white;
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
     gap: 20px;
+    padding: 10px;
   }
-  
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
+
+  .hero-text h1 {
+    font-size: 2rem;
   }
-  
-  .social-icons a:hover img {
-    transform: scale(1.2);
-  } */
-  .hero button:hover {
-    background-color: #333;
-    border: 1px solid white;
-    transform: scale(1.05);
+
+  .hero-text p {
+    font-size: 1rem;
   }
-  
+
+  .hero-img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-text .btn {
+    font-size: 14px;
+  }
+
+  .hero button {
+    font-size: 14px;
+  }
+}
