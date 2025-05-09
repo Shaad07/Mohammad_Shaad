@@ -10,14 +10,15 @@ const Navbar = () => {
   // Scroll to section logic
   const [isOpen, setIsOpen] = useState(false);
 
-  // Handler to close the menu on link click
+  // Add this handler to close menu on link click
   const handleLinkClick = () => {
-    setIsMenuOpen(false);  // Close the menu when a link is clicked
+    setIsOpen(false);
+    setIsMenuOpen(false); // Close the mobile menu when a link is clicked
   };
 
   const scrollToSection = (id) => {
     if (location.pathname !== "/") {
-      navigate("/");
+      navigate("/"); // Navigate to home if not already there
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -44,17 +45,17 @@ const Navbar = () => {
 
       {/* Navbar Links */}
       <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <li onClick={() => {scrollToSection("hero"); handleLinkClick();}}>Home</li>
-        <li onClick={() => {scrollToSection("about"); handleLinkClick();}}>About</li>
-        <li onClick={() => {scrollToSection("skills"); handleLinkClick();}}>Skills</li>
-        <li onClick={() => {scrollToSection("education"); handleLinkClick();}}>Education</li>
-        <li onClick={() => {scrollToSection("projects"); handleLinkClick();}}>Projects</li>
-        <li onClick={() => {scrollToSection("contact"); handleLinkClick();}}>Contact</li>
+        <li onClick={() => { scrollToSection("hero"); handleLinkClick(); }}>Home</li>
+        <li onClick={() => { scrollToSection("about"); handleLinkClick(); }}>About</li>
+        <li onClick={() => { scrollToSection("skills"); handleLinkClick(); }}>Skills</li>
+        <li onClick={() => { scrollToSection("education"); handleLinkClick(); }}>Education</li>
+        <li onClick={() => { scrollToSection("projects"); handleLinkClick(); }}>Projects</li>
+        <li onClick={() => { scrollToSection("contact"); handleLinkClick(); }}>Contact</li>
         <li>
           <Link
             to="/certificates"
             className={location.pathname === "/certificates" ? "active-link" : ""}
-            onClick={handleLinkClick}  // Close menu on click
+            onClick={handleLinkClick}
           >
             Certificates
           </Link>

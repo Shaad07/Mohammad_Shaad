@@ -117,7 +117,7 @@
     font-weight: bold;
   }
 
-  /* Smooth transition for navbar opening */
+  /* Mobile menu animation */
   @keyframes slideIn {
     0% {
       transform: translateX(-100%);
@@ -127,7 +127,6 @@
     }
   }
 
-  /* Mobile menu animation */
   .nav-links.open {
     animation: slideIn 0.3s ease-out;
   }
@@ -143,4 +142,3 @@
 .active-link:hover {
   color: #00e6e6; /* Ensure active link doesn't change color */
 }
-
